@@ -1,7 +1,4 @@
-let randomPic = "https://api.adorable.io/avatars/32/" + Math.random().toString(36).substring(7) + ".png";
-
 let selectedUsername = "";
-let selectedUsernamePic = randomPic;
 
 $(document).ready(function() {
     $('#sendMessageButton').hide();
@@ -23,7 +20,6 @@ $(function () {
             $('#u').val(selectedUsername);
         }
 
-        $('#pic').val(selectedUsernamePic);
 
         socket.emit('chat message',  $('#u').val(), $('#m').val(), $('#pic').val());
 
@@ -36,7 +32,7 @@ $(function () {
     socket.on('chat message', function(username, msg, pic){
 
         $('<div class="message"> \
-                <div class="icon"><img src='+ pic +'></div> \
+                <div class="icon"><img src=https://eu.ui-avatars.com/api/?name='+ username +'></div> \
                 <div class="body"><div class="username">' + username + '</div> \
                 <div class="content">' + msg + '</div></div> \
                 </div>').appendTo('#messages');

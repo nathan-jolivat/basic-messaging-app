@@ -11,8 +11,8 @@ var Autolinker = require('autolinker');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'root',
-    database : 'nodelogin'
+    password : '',
+    database : 'basic_msg_app'
 });
 connection.connect(function(err) {
    if (err) {
